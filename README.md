@@ -2,3 +2,5 @@
 ```
 allure generate --clean  <path-to-your project>\target\allure-results -o <path-to-your project>\target\allure-report
 ```
+
+JAVA 11.0.7
