@@ -20,9 +20,9 @@ public class LoginTest extends BaseTest {
         loginPage = new LoginPage(webDriver);
     }
 
-    @Epic("Почтовый сервис")
-    @Feature("Авторизация")
-    @Test(description = "Логин с валидными параметрами")
+    @Epic("Mail service")
+    @Feature("Authorization")
+    @Test(description = "Login with valid credentials")
     public void loginTest() {
         loginPage.waitPageVisible()
                 .setUsername(username)
@@ -31,7 +31,7 @@ public class LoginTest extends BaseTest {
         mailHomePage = loginPage.clickLoginToMailButton()
                 .waitPageVisible();
 
-        assertEquals(mailHomePage.getUserEmail(), username, "Название почты неверно");
+        assertEquals(mailHomePage.getUserEmail(), username, "Email username wrong");
         mailHomePage.clickLogOutButton();
     }
 }

@@ -34,9 +34,9 @@ public class RegistrationTest extends BaseTest {
         mainStorePage = new MainStorePage(webDriver);
     }
 
-    @Epic("Магазин")
-    @Feature("Регистрация")
-    @Test(description = "Регистрация аккаунта с валидными параметрами")
+    @Epic("Online store")
+    @Feature("Registration")
+    @Test(description = "Account registration")
     public void registration() {
         mainStorePage.waitPageVisible()
                 .clickSignInButton()
@@ -52,6 +52,6 @@ public class RegistrationTest extends BaseTest {
                 .setPhone(phone)
                 .selectState(state);
         accountHomePage = accountCreationPage.clickRegisterButton();
-        assertEquals(accountHomePage.getAccountName(),"Ivan Ivanov","Имя аккаунта неверно.");
+        assertEquals(accountHomePage.getAccountName(),"Ivan Ivanov","Account name wrong");
     }
 }
